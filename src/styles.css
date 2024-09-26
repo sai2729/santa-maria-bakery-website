@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color: #ac56ad;
+    --secondary-color: #9235d1;
+    --text-color: white;
+    --font-family: cursive;
+    --accent-color: #ac56ad;
+}

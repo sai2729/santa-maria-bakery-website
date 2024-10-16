@@ -16,6 +16,10 @@ body {
     color: white !important; /* Ensure font color is white */
     font-weight: bold; /* Make the font bold */
   }
+  .navbar-nav .nav-link {
+    color: white !important; /* Ensure font color is white */
+    font-weight: bold; /* Make the font bold */
+  }
   
   .navbar-nav .nav-link:hover {
     color: #eaeaea !important; /* Optional: slightly lighter color on hover */

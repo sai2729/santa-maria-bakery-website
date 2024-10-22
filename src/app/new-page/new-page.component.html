@@ -8,7 +8,7 @@
         <div class="card-body">
           <h3 class="card-title">Artisan's Oven</h3>
           <p class="card-text">Crafting exquisite sourdough and artisanal breads with time-honored techniques.</p>
-          <button class="btn btn-primary add-to-cart" data-name="Artisanal Sourdough Bread" data-price="6.99" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn btn-primary add-to-cart" data-name="Artisanal Sourdough Bread" data-price="6.99" (click)="addToCart('Artisanal Sourdough Bread',6.99)">Add to Cart</button>
         </div>
       </div>
     </div>
@@ -19,7 +19,7 @@
         <div class="card-body">
           <h3 class="card-title">Patisserie Moderne</h3>
           <p class="card-text">A fusion of classic French pastry with contemporary flair and innovative flavors.</p>
-          <button class="btn btn-primary add-to-cart" data-name="Chocolate Croissant" data-price="3.50" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn btn-primary add-to-cart" data-name="Chocolate Croissant" data-price="3.50" (click)="addToCart('Patisserie Moderne',3.50)">Add to Cart</button>
         </div>
       </div>
     </div>
@@ -30,31 +30,20 @@
         <div class="card-body">
           <h3>Wholesome Delights</h3>
           <p class="card-text">Gourmet gluten-free and vegan creations that don't compromise on taste or texture.</p>
-          <button class="btn btn-primary add-to-cart" data-name="Gluten-Free Blueberry Muffin" data-price="4.25" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn btn-primary add-to-cart" data-name="Gluten-Free Blueberry Muffin" data-price="4.25" (click)="addToCart('Wholesome Delights', 4.25)">Add to Cart</button>
         </div>
       </div>
     </div>
   </div>
   
+<script src="app.js"></script>
+  
   <!-- 订单记录部分 -->
   <div id="order-summary" class="mt-5">
-    <h3>订单记录</h3>
+    <h3>Order record</h3>
     <ul id="order-list"></ul>
   </div>
 </section>
 
-<script>
-  function addToCart(button) {
-    const name = button.getAttribute('data-name');
-    const price = button.getAttribute('data-price');
-    const orderList = document.getElementById('order-list');
-    
-    // 创建新的列表项并立即显示订单记录
-    const listItem = document.createElement('li');
-    listItem.textContent = `${name} - $${price}`;
-    orderList.appendChild(listItem);
-    
-    // 立即更新订单记录显示
-    orderList.style.display = 'block'; // 确保订单记录部分可见
-  }
-</script>
+
+

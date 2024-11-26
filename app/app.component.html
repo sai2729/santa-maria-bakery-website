@@ -23,6 +23,9 @@
         <li class="nav-item">
           <a routerLink="/new-page">Cart</a>
         </li>
+        <li class="nav-item">
+          <a routerLink="/login">Login</a>
+        </li>
       </ul>
 
       <!-- Right-side Cart Icon and Contact Info -->
@@ -33,7 +36,8 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link position-relative" href="#" id="cart-toggle">
+          <!--<a class="nav-link position-relative" id="cart-toggle" routerLink="/login">-->
+          <a class="nav-link position-relative" routerLink="/login">
             <i class="bi bi-cart-fill" style="font-size: 24px;"></i>
             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
               0
@@ -41,6 +45,25 @@
             </span>
           </a>
         </li>
+        <!--
+        <li class="container">
+          <header>
+            <div class="shopping">
+              <i class="bi bi-cart-fill" style="font-size: 24px;"></i>
+              <span class="quantity">0</span>
+            </div>
+          </header>
+          <div class="list"></div>
+        </li>
+        <li class="card">
+          <h1>card</h1>
+          <ul class="listCard"></ul>
+          <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Close</div>
+          </div>
+        </li>
+        -->
       </ul>
     </div>
   </div>

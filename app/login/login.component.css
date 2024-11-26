@@ -1,0 +1,59 @@
+.login-container {
+    text-align: center;
+    padding: 20px;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.continue-button, .google-button, .apple-button {
+    max-width: 300px; /* 设置最大宽度 */
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button {
+    background-color: black;
+    color: white;
+}
+
+.google-button {
+    background-color: #4285F4;
+    color: white;
+}
+
+.apple-button {
+    background-color: #000;
+    color: white;
+}
+
+.or-divider {
+    margin: 10px 0;
+}
+
+.terms {
+    font-size: 12px;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    input, .continue-button, .google-button, .apple-button {
+        width: 90%; /* 在小屏幕上增加宽度 */
+        padding: 8px; /* 减小内边距 */
+    }
+
+    .terms {
+        font-size: 10px; /* 减小字体大小 */
+    }
+}

@@ -112,6 +112,33 @@ nav ul li a:hover {
     color: white;
 }
 
+nav ul li header div {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 300;
+    padding: 1rem 1.5rem;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li header div:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+nav div div ul li div .list {
+    /* 添加样式以避免空规则集 */
+    display: none; /* 示例样式，您可以根据需要进行更改 */
+}
+
+nav div div ul .card {
+    position:fixed;
+    top: 0;
+    left: calc(100% - 500px);
+    width: 500px;
+     
+}
+
 main {
     max-width: 1200px;
     margin: 0 auto;

@@ -1,0 +1,118 @@
+<nav class="navbar navbar-expand-md fixed-top custom-navbar">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+        <!-- Navbar Toggler for smaller screens (Hamburger Menu) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Centered Brand Logo -->
+        <a class="navbar-brand position-absolute start-50 translate-middle-x" href="#">
+            <img src="assets/Logo.png" width="65" height="65" alt="Santa Maria Bakery Logo">
+        </a>
+
+        <!-- Collapsible Navbar Content -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto fw-bold">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+            </ul>
+
+            <!-- Right-side Cart Icon and Contact Info -->
+            <ul class="navbar-nav ms-auto fw-bold">
+                <li class="nav-item">
+                    <a class="nav-link" href="tel:+12195882510">
+                        <i class="bi bi-telephone-fill"></i> +1 219 588 2510
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link position-relative" href="#" id="cart-toggle">
+                        <i class="bi bi-cart-fill" style="font-size: 24px;"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                            <span class="visually-hidden">items in cart</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid center-wrapper">
+    <h2 class="text-center mb-4">Bakery Inventory</h2>
+
+    <!-- Add Product Button -->
+    <div class="text-center mb-3">
+        <button
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#addProductModal">
+            Add Product
+        </button>
+    </div>
+
+    <!-- Search Input Field -->
+    <div class="d-flex justify-content-center mb-3">
+        <input
+            type="text"
+            placeholder="Search by Product Name"
+            class="form-control w-50"
+            (input)="onSearch($event)"
+        />
+    </div>
+
+    <!-- AG Grid -->
+    <ag-grid-angular
+        class="ag-theme-alpine"
+        style="width: 100%; height: 500px;"
+        [rowData]="rowData"
+        [columnDefs]="columnDefs"
+        [defaultColDef]="defaultColDef"
+        [animateRows]="true"
+        #agGrid>
+    </ag-grid-angular>
+
+    <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addProductModalLabel">Add New Product</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form (ngSubmit)="addProduct()">
+                        <div class="mb-3">
+                            <label for="productName" class="form-label">Product Name</label>
+                            <input type="text" id="productName" [(ngModel)]="newProduct.name" name="name" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productPrice" class="form-label">Price</label>
+                            <input type="number" id="productPrice" [(ngModel)]="newProduct.price" name="price" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productDescription" class="form-label">Description</label>
+                            <textarea id="productDescription" [(ngModel)]="newProduct.description" name="description" class="form-control" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productStatus" class="form-label">Status</label>
+                            <select id="productStatus" [(ngModel)]="newProduct.status" name="status" class="form-select" required>
+                                <option value="In Stock">In Stock</option>
+                                <option value="Out of Stock">Out of Stock</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productImage" class="form-label">Upload Product Image</label>
+                            <input type="file" id="productImage" (change)="onFileSelected($event)" class="form-control" accept="image/*" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Add Product</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

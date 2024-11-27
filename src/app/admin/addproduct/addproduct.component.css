@@ -1,0 +1,45 @@
+.custom-navbar {
+    background-color:#ac56ad; /* Set the desired background color */
+  }
+  
+  .navbar-nav .nav-link {
+    color: white !important; /* Ensure font color is white */
+    font-weight: bold; /* Make the font bold */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #eaeaea !important; /* Optional: slightly lighter color on hover */
+  }
+  
+  .navbar-brand {
+    color: white !important; /* Ensure the brand text or logo text (if any) is also white */
+  }
+  
+/* Ensures the grid fills the available width and height */
+.ag-theme-alpine {
+    width: 100%; /* Full width for the grid */
+    max-width: 1200px; /* Limit width for very large screens */
+    margin: 0 auto; /* Center horizontally */
+}
+
+/* Center the wrapper vertically and horizontally */
+.center-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    padding: 1rem; /* Add padding for better appearance */
+    box-sizing: border-box;
+}
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 768px) {
+    .ag-theme-alpine {
+        max-width: 100%; /* Use full width on smaller screens */
+    }
+
+    .center-wrapper {
+        padding: 0.5rem;
+    }
+}

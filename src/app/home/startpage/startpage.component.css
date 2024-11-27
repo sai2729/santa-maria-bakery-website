@@ -1,0 +1,330 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.custom-navbar {
+    background-color: #ac56ad; /* Set the desired background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Retain the shadow for a polished look */
+}
+
+.custom-navbar .navbar-nav .nav-link {
+    color: white !important; /* Ensure font color is white */
+    font-weight: bold; /* Make the font bold */
+    text-decoration: none; /* Ensure no underlines */
+    padding: 1rem 1.5rem; /* Adjust padding for a uniform look */
+    display: block; /* Ensure clickable area covers the full height */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.custom-navbar .navbar-nav .nav-link:hover {
+    color: #eaeaea !important; /* Optional: slightly lighter color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Add subtle hover effect */
+}
+
+.custom-navbar .navbar-brand {
+    color: white !important; /* Ensure the brand text or logo text is also white */
+    font-weight: bold; /* Make the brand text stand out */
+    text-transform: uppercase; /* Optional: Make text uppercase for branding */
+    font-size: 1.5rem; /* Adjust font size for prominence */
+}
+
+.custom-navbar .navbar-toggler {
+    border: none; /* Remove border from the hamburger icon */
+    color: white; /* Ensure the hamburger icon is white */
+}
+
+.custom-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-size: 1rem 1rem;
+    background-repeat: no-repeat;
+}
+
+  
+.cart-badge {
+    transform: translate(-50%, -50%);
+    top: -10px; /* Adjust this value as necessary */
+    right: -10px;
+  }
+
+  
+/* Ensure all carousel images have the same size */
+.carousel-img {
+    width: 100%;           /* Make the image take full width of the container */
+    height: 300px;          /* Set a fixed height for mobile devices */
+    object-fit: cover;      /* Ensures the image covers the space without distorting */
+  }
+  
+  /* Optional: Media query for larger screens (if you want larger images on desktops) */
+  @media (min-width: 768px) {
+    .carousel-img {
+      height: 500px;        /* Adjust the height for larger screens */
+    }
+  }
+
+  .fixed-card-img {
+    height: 250px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensures the image fills the area without distorting */
+    width: 100%; /* Makes the image take the full width of the card */
+  }
+  
+  
+
+/* header {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+} */
+
+h1, h2, h3 {
+    font-family: cursive;
+}
+
+/* header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+} */
+
+nav {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 300;
+    padding: 1rem 1.5rem;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.bakery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.bakery-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.bakery-item:hover {
+    transform: translateY(-5px);
+}
+
+.bakery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.bakery-item-content {
+    padding: 20px;
+}
+
+.bakery-item h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.cart-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+}
+
+#cart-section {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid var(--secondary-color);
+    text-align: left;
+}
+
+th {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.total {
+    text-align: right;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #c18f5c;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+}
+
+/* Ensure card consistency */
+.card.h-100 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-body {
+    flex-grow: 1; /* Allow body to take remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute content vertically */
+    padding: 20px; /* Consistent padding */
+  }
+  
+  .card-body h3 {
+    font-family: cursive;
+    font-size: 1.5rem; /* Adjusted for readability */
+    margin-bottom: 10px;
+    color: var(--accent-color);
+  }
+  
+  .card-body p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+  }
+  
+  /* Buttons in card */
+  .card-body .btn {
+    width: 100%; /* Ensure buttons span full width */
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .card-body .btn:hover {
+    background-color: #c18f5c; /* Slightly darker hover effect */
+  }
+  
+  /* Increment/Decrement Controls */
+  .card-body .d-flex {
+    justify-content: center; /* Center controls */
+    gap: 10px; /* Spacing between buttons */
+  }
+  
+  .card-body .btn-outline-secondary {
+    width: 40px; /* Fixed size for increment/decrement buttons */
+    height: 40px;
+    font-size: 1.2rem;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--secondary-color);
+    border-radius: 50%; /* Circular buttons */
+    background-color: white;
+    color: var(--secondary-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .card-body .btn-outline-secondary:hover {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  .card-body span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+  }
+
+  

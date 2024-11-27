@@ -1,0 +1,44 @@
+.product-image {
+    width: 80px; /* Adjust the width */
+    height: 80px; /* Adjust the height */
+    object-fit: cover; /* Ensure the image fits nicely within the dimensions */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    border: 1px solid #dee2e6; /* Optional: Add a border for better visibility */
+  }
+
+  .custom-navbar {
+    background-color: #ac56ad; /* Set the desired background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Retain the shadow for a polished look */
+}
+
+.custom-navbar .navbar-nav .nav-link {
+    color: white !important; /* Ensure font color is white */
+    font-weight: bold; /* Make the font bold */
+    text-decoration: none; /* Ensure no underlines */
+    padding: 1rem 1.5rem; /* Adjust padding for a uniform look */
+    display: block; /* Ensure clickable area covers the full height */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.custom-navbar .navbar-nav .nav-link:hover {
+    color: #eaeaea !important; /* Optional: slightly lighter color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Add subtle hover effect */
+}
+
+.custom-navbar .navbar-brand {
+    color: white !important; /* Ensure the brand text or logo text is also white */
+    font-weight: bold; /* Make the brand text stand out */
+    text-transform: uppercase; /* Optional: Make text uppercase for branding */
+    font-size: 1.5rem; /* Adjust font size for prominence */
+}
+
+.custom-navbar .navbar-toggler {
+    border: none; /* Remove border from the hamburger icon */
+    color: white; /* Ensure the hamburger icon is white */
+}
+
+.custom-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-size: 1rem 1rem;
+    background-repeat: no-repeat;
+}
